@@ -4,19 +4,44 @@
     <meta charset="UTF-8">
     <title>LifeSpot</title>
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css" />
-    <link href="../Static/JS/index.js" rel="stylesheet" type="text/javascript"/>
+    <script src="../Static/JS/index.js" rel="stylesheet" type="text/javascript"></script>
+    <script type="text/javascript" defer src="../Static/JS/testing.js"></script>
+    <script>
+        // Создадим и обработаем сессию
+        //let session = handleSession();
+        const inputParseFunction = function () {
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
+        // Логируем в консоль.
+        //sessionLog(session)
+    </script>
+    <script>
+        // Проверка на возраст
+        checkAge();
+
+        // сохранение сессии
+        handleSession()
+
+        // вывод данных сессии в консоль
+        sessionLog();
+
+        // функция для получения пользовательского ввода    
+        const inputParseFunction = function () {
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
+    </script>
 </head>
-<header class="bordered">
+<header id="header-index">
     <!--Заголовок страницы-->
     <h1>LifeSpot - прямые трансляции с улиц</h1>
     <!--Параграф-->
     <p>Покажем, что происходит прямо сейчас</p>
-    <div class="search">
-        <form>
-            <input type="text" placeholder="Поиск видео по названию...">
+            <input type="text" placeholder= "Поиск видео по названию..." oninput="
+    const inputParseFunction = function () {
+        return document.getElementsByTagName('input')[0].value.toLowerCase();
+    }
+    filterContent( inputParseFunction )">
             <button type="submit">Искать</button>
-        </form>
-    </div>
 </header>
 <body>
     <!--Сайд-бар страницы-->
